@@ -32,10 +32,23 @@ namespace XFM2_Controller
 
         private void UpdateSynth(object sender, EventArgs e)
         {
-            if (sender is UsercontrolAlgorithm)
+            if (sender is UsercontrolAlgorithm us)
             {
-                UsercontrolAlgorithm us = (UsercontrolAlgorithm)sender;
-                MessageBox.Show(us.Patch.Parameter(Patch.ParamsEnum.PRM_ALGO0).Value.ToString());
+                Patch patch = us.Patch;
+                string message = "";
+                int teller = 0;
+                foreach (Patch.ParamsEnum item in Enum.GetValues(typeof(Patch.ParamsEnum)))
+                {
+                    message += $"Parameter: {patch.Parameter(item).Name} = {patch.Parameter(item).Value}" + System.Environment.NewLine;
+
+                    teller++;
+
+                    if (teller == 6)
+                    {
+                        break;
+                    }
+                }
+                MessageBox.Show(message);
             }
         }
     }

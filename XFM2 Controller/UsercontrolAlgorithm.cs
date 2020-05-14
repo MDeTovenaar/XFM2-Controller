@@ -94,15 +94,6 @@ namespace XFM2_Controller
             {
                 ValuesChanged(this, new EventArgs());
             }
-
-            if (chk.Checked)
-            {
-                lblEvent.Text = chk.Tag.ToString() + " checked";
-            }
-            else
-            {
-                lblEvent.Text = chk.Tag.ToString() + " unchecked";
-            }
         }
 
         private void UsercontrolAlgorithm_Load(object sender, EventArgs e)
@@ -158,17 +149,20 @@ namespace XFM2_Controller
                     this.Controls.Add(chk);
                 }
             }
-            //for (int i = 0; i < 6; i++)
-            //{
-            //    // Feedback checkboxes
-            //    var chk = new CheckBox
-            //    {
-            //        AutoSize = true,
-            //        Text = "",
-            //        Location = new Point(x + i * 40, 240)
-            //    };
-            //    this.Controls.Add(chk);
-            //}
+            for (int i = 0; i < 6; i++)
+            {
+                // Feedback Trackbar
+                var trb = new TrackBar
+                {
+                    Minimum = 0,
+                    Maximum=255,
+                    LargeChange=10,
+                    SmallChange = 1,
+                    Orientation = Orientation.Vertical,
+                    Location = new Point(x - 10 + i * 40, 230)
+                };
+                this.Controls.Add(trb);
+            }
         }
         #endregion
 
