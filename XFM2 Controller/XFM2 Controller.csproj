@@ -52,6 +52,8 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parameter.cs" />
+    <Compile Include="Patch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsercontrolAlgorithm.cs">
@@ -59,6 +61,12 @@
     </Compile>
     <Compile Include="UsercontrolAlgorithm.Designer.cs">
       <DependentUpon>UsercontrolAlgorithm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsercontrolOperator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsercontrolOperator.Designer.cs">
+      <DependentUpon>UsercontrolOperator.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -74,6 +82,9 @@
     </Compile>
     <EmbeddedResource Include="UsercontrolAlgorithm.resx">
       <DependentUpon>UsercontrolAlgorithm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsercontrolOperator.resx">
+      <DependentUpon>UsercontrolOperator.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

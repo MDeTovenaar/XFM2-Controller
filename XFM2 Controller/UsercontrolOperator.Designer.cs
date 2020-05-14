@@ -1,6 +1,6 @@
 ﻿namespace XFM2_Controller
 {
-    partial class UsercontrolAlgorithm
+    partial class UsercontrolOperator
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblEvent = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lblEvent
-            // 
-            this.lblEvent.Location = new System.Drawing.Point(407, 29);
-            this.lblEvent.Name = "lblEvent";
-            this.lblEvent.Size = new System.Drawing.Size(238, 23);
-            this.lblEvent.TabIndex = 0;
-            this.lblEvent.Text = "Event:";
-            // 
-            // UsercontrolAlgorithm
+            // UsercontrolOperator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblEvent);
-            this.Name = "UsercontrolAlgorithm";
-            this.Size = new System.Drawing.Size(648, 297);
-            this.Load += new System.EventHandler(this.UsercontrolAlgorithm_Load);
+            this.Name = "UsercontrolOperator";
+            this.Size = new System.Drawing.Size(416, 263);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblEvent;
     }
 }

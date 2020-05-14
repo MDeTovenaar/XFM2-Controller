@@ -21,9 +21,22 @@ namespace XFM2_Controller
         {
 
             PanelContainer.Controls.Clear();
-            var us = new UsercontrolAlgorithm();
+            var us = new UsercontrolAlgorithm(new Patch())
+            {
+                BackColor = Color.AliceBlue
+            };
+            us.ValuesChanged += UpdateSynth;
             PanelContainer.Controls.Add(us);
             
+        }
+
+        private void UpdateSynth(object sender, EventArgs e)
+        {
+            if (sender is UsercontrolAlgorithm)
+            {
+                UsercontrolAlgorithm us = (UsercontrolAlgorithm)sender;
+                MessageBox.Show(us.Patch.Parameter(Patch.ParamsEnum.PRM_ALGO0).Value.ToString());
+            }
         }
     }
 }

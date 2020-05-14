@@ -77,6 +77,7 @@
             // 
             // PanelContainer
             // 
+            this.PanelContainer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelContainer.Location = new System.Drawing.Point(0, 25);
             this.PanelContainer.Name = "PanelContainer";
