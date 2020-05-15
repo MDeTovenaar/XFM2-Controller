@@ -9,7 +9,7 @@ namespace XFM2_Controller
     public class Patch
     {
         #region Fields
-        private Dictionary<ParamsEnum, Parameter> _params = new Dictionary<ParamsEnum, Parameter>();
+        private readonly Dictionary<ParamsEnum, Parameter> _params = new Dictionary<ParamsEnum, Parameter>();
         #endregion
 
         #region Constructors        
@@ -597,6 +597,8 @@ namespace XFM2_Controller
             PRM_ARP_OCTAVES = 454
         }
         #endregion
+
+        public override string ToString() => Name;
 
         #region Methods
         public string Name { get; set; }

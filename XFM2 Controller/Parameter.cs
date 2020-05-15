@@ -19,6 +19,7 @@ namespace XFM2_Controller
         }
         #endregion
 
+        public override string ToString() => Name;
 
         public string Name { get; set; } = "New Parameter";
         public int Number { get; set; } = 0;
